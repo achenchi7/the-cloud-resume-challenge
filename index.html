@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!--=============== CSS===============-->
+    <link rel="stylesheet" href="styles.css" >
+
+    <title>Responsive Portfolio Website</title>
+</head>
+<body>
+
+    <!--======================STYLE SWITCHER============-->
+    <input type="radio" name="color" id="color-1" />
+    <input type="radio" name="color" id="color-2" />
+    <input type="radio" name="color" id="color-3" />
+    <input type="radio" name="color" id="color-4" />
+    <input type="radio" name="color" id="color-5" />
+    <input type="radio" name="color" id="color-6" />
+    <input type="radio" name="color" id="color-7" />
+    <input type="radio" name="color" id="color-8" />
+    <input type="radio" name="color" id="color-9" />
+    <input type="radio" name="color" id="color-10" />
+    <input type="checkbox" id="day-night" />
+    <input type="checkbox" id="toggler" />
+
+    <div class="style__switcher">
+        <label for="toggler" class="style__switcher-toggler">
+            <i class="fa-solid fa-gear fa-spin"></i>
+        </label>
+
+        <label for="day-night" class="style__switcher-theme">
+            <i class="fa-solid fa-sun"></i>
+            <i class="fa-solid fa-moon"></i>
+        </label>
+
+        <h3 class="style__switcher-title">Theme Colors</h3>
+
+        <div class="style__switcher-colors">
+            <label for="color-1" class="color-1 color" ></label>
+            <label for="color-2" class="color-2 color" ></label>
+            <label for="color-3" class="color-3 color" ></label>
+            <label for="color-4" class="color-4 color" ></label>
+            <label for="color-5" class="color-5 color" ></label>
+            <label for="color-6" class="color-6 color" ></label>
+            <label for="color-7" class="color-7 color" ></label>
+            <label for="color-8" class="color-8 color" ></label>
+            <label for="color-9" class="color-9 color" ></label>
+            <label for="color-10" class="color-10 color" ></label>
+        </div>
+    </div>
+
+    <!--======================HEADER================-->
+    <header class="header">
+        <nav class="nav container">
+            <a href="" class="nav__logo">Jully Achenchi</a>
+
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#home" class="nav__link active-link">Home</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">About</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#qualification" class="nav__link">Experience</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#works" class="nav__link nav__link-button">Portfolio</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <!--====================== MAIN ================-->
+    <main class="main">
+        <!--============== HOME =================-->
+        <section class="home" id="home">
+            <div class="home__container container grid">
+                <div class="home__content">
+                    <span class="home__small">Hello</span>
+                    <h1 class="home__title">
+                        <span>I'm</span> Jully Achenchi <br />
+                        a <span>Juniour Cloud/DevOps Engineer</span>
+                    </h1>
+
+                    <p class="home__description">
+                        A driven junior Cloud/DevOps Engineer with a strong background in AWS technologies, cloud-native
+                        solutions, and infrastructure management using Terraform.
+                    </p>
+
+                    <div class="home__btns">
+                        <a href="#contact" class="btn">Contact me</a>
+                        <a href="#works" class="btn btn--transparent">Portfolio</a>
+                    </div>
+
+                    <!--======== WEBSITE COUNTER ========-->
+                    <div class="website-counter">
+                        <p class="count-description">Number of page visits:</p>
+                        <p class="count-number">0</p>
+                    </div>
+                </div>
+
+                <div class="home__img-wrapper">
+                    <img src="assets/Profile_img.png" alt="" class="home__img" />
+                </div>
+            </div>
+        </section>
+
+        <!--============== ABOUT =================-->
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <div class="about__img-wrapper">
+                    <img src="assets/Profile_img-1.jpg" alt="" class="about__img" />
+                    <img src="assets/Profile_img-1.jpg" alt="" class="about__img" />
+                    <img src="assets/Profile_img-1.jpg" alt="" class="about__img" />
+                    <img src="assets/Profile_img-1.jpg" alt="" class="about__img" />
+                    
+                    
+                </div>
+
+                <div class="about__content">
+                    <h2 class="section__title" data-title="Who am I?">
+                        I'm Jully Achenchi, a juniour Cloud/DevOps Engineer
+                    </h2>
+
+                    <p class="about__description">
+                        Well, I will figure this out before the website goes online. Hopefully
+                        not some generic text.
+                    </p>
+
+                    <ul class="about__data grid">
+                        <li class="data__item">
+                            <h3 class="data__title">Name</h3>
+                            <span class="data__description">Jully Achenchi</span>
+                        </li>
+
+                        <li class="data__item">
+                            <h3 class="data__title">Location</h3>
+                            <span class="data__description">Nairobi, Kenya</span>
+                        </li>
+                        
+                        <li class="data__item">
+                            <h3 class="data__title">Interests</h3>
+                            <span class="data__description">Volleyball, Reading, Cycling</span>
+                        </li>
+                        
+                    </ul>
+                    <div class="about__bottom">
+                        <a download="" href="Jully Achenchi_CV_.pdf" class="btn">Download Cv</a>
+
+                        <div class="about__social-links">
+                            <a href="https://www.linkedin.com/in/jully-achenchi/" target="_blank" class="about__social-link">
+                                <i class="fa-brands fa-linkedin"></i> 
+                            </a>
+                            <a href="https://github.com/achenchi7" target="_blank" class="about__social-link">
+                                <i class="fa-brands fa-github"></i> 
+                            </a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!--============== QUALIFICATION =================-->
+        <section class="qualification section" id="qualification">
+            <h2 class="section__title title-center" data-title="My journey">
+                Qualifications
+            </h2>
+
+            <div class="resume__container container grid" >
+                <div class="resume__group">
+                    <h3 class="resume__heading">Education</h3>
+
+                    <div class="resume__items">
+                        <div class="resume__item">
+                            <div class="resume__header">
+                                <h3 class="resume__subtitle">ALX Chatroom Ambassandor</h3>
+                                <span class="resume__icon">+</span>
+                            </div>
+
+                            <div class="resume__content">
+                                <div class="resume__data-title">
+                                    <h3 class="resume__title">ALX Africa</h3>
+                                    <span class="resume__date">Aug 2024 - Nov 2024</span>
+                                </div>
+
+                                <p class="resume__description">
+                                    <li class="experience_list1">Organize and host bi-weekly AWS community events with AWS learners and industry experts,
+                                        enhancing peer-to-peer learning, and networking respectively</li>
+                                    
+                                    <li class="experience_list2">erve as a point of contact for AWS learners, addressing their inquiries and advocating for their
+                                        needs that led to a 30% rise in learner satisfaction</li>
+
+                                    <li class="experience_list3">Regularly gather feedback from learners and implement improvements to enhance community
+                                        experience.</li>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="resume__item">
+                            <div class="resume__header">
+                                <h3 class="resume__subtitle">Mobalytics Remote Externship</h3>
+                                <span class="resume__icon">-</span>
+                            </div>
+
+                            <div class="resume__content">
+                                <div class="resume__data-title">
+                                    <h3 class="resume__title">Extern</h3>
+                                    <span class="resume__date">Apr 2024 - May 2024</span>
+                                </div>
+
+                                <p class="resume__description">
+                                    <li class="experience_list1"> Market Research: I explored a high-level overview of the following games- Pokemon Go and
+                                        Fortnite and conducted a deep dive analysis into player psychology.</li>
+                                       
+                                    <li class="experience_list2">Presentation & Public Speaking: I summarized my research and made a compelling presentation
+                                           that highlights the key takeaways and recommendations to Mobalytics on market expansion
+                                           opportunities.</li>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="resume__item">
+                            <div class="resume__header">
+                                <h3 class="resume__subtitle">Esri Easten Africa</h3>
+                                <span class="resume__icon">+</span>
+                            </div>
+
+                            <div class="resume__content">
+                                <div class="resume__data-title">
+                                    <h3 class="resume__title">Intern</h3>
+                                    <span class="resume__date">Jan 2022 - Apr 2024</span>
+                                </div>
+
+                                <p class="resume__description">
+                                    <li class="experience_list1"> Assisted in the development of an ArcGIS tool to streamline the land acquisition process,
+                                        facilitating accurate determination of land area and compensation amounts</li>
+                                    
+                                    <li class="experience_list2">Led a team in integrating ArcGIS PRO, Survey 123, Field Maps, dashboards, and a web app to
+                                        enable effective project monitoring and evaluation for a non-profit organization</li>
+                                        
+                                    <li class="experience_list3">Developed a presentation outlining key findings in the project, leading to a successful
+                                        completion</li>
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="resume__group">
+                    <h3 class="resume__heading">Experience</h3>
+
+                    <div class="resume__items">
+                        <div class="resume__item">
+                            <div class="resume__header">
+                                <h3 class="resume__subtitle">AWS Cloud Computing</h3>
+                                <span class="resume__icon">+</span>
+                            </div>
+
+                            <div class="resume__content">
+                                <div class="resume__data-title">
+                                    <h3 class="resume__title">ALX Africa</h3>
+                                    <span class="resume__date">Mar 2024 - Nov 2024</span>
+                                </div>
+
+                                <p class="resume__description">
+                                    
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="resume__item">
+                            <div class="resume__header">
+                                <h3 class="resume__subtitle">BSc. Geospatial Information Science</h3>
+                                <span class="resume__icon">-</span>
+                            </div>
+
+                            <div class="resume__content">
+                                <div class="resume__data-title">
+                                    <h3 class="resume__title">Jomo Kenyatta University of Agriculture and Technology</h3>
+                                    <span class="resume__date">Sep 2018 - Dec 2023</span>
+                                </div>
+
+                                <p class="resume__description">
+                                    
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="resume__item">
+                            <div class="resume__header">
+                                <h3 class="resume__subtitle"></h3>
+                                <span class="resume__icon">+</span>
+                            </div>
+
+                            <div class="resume__content">
+                                <div class="resume__data-title">
+                                    <h3 class="resume__title"></h3>
+                                    <span class="resume__date"></span>
+                                </div>
+
+                                <p class="resume__description">
+                                    
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--============== SKILLS =================-->
+        <section class="skills section" id="skills">
+            <h2 class="section__title title-center" data-title="Skills">
+                Professional Skills
+            </h2>
+            <div class="skills__container container grid">
+                <div class="skills__item">
+                    <div class="skills__titles">
+                        <h3 class="skills__name">AWS</h3>
+                        <span class="skills__no"></span>
+                    </div>
+
+                    <p class="skills__description">
+                        I know AWS. Trust me man
+                    </p>
+
+                    <div class="skills__bar">
+                        <div class="skills__percentage">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills__item">
+                    <div class="skills__titles">
+                        <h3 class="skills__name">Terraform</h3>
+                        <span class="skills__no"></span>
+                    </div>
+
+                    <p class="skills__description">
+                        I know Terraform. Trust me man
+                    </p>
+
+                    <div class="skills__bar">
+                        <div class="skills__percentage">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills__item">
+                    <div class="skills__titles">
+                        <h3 class="skills__name">Docker</h3>
+                        <span class="skills__no"></span>
+                    </div>
+
+                    <p class="skills__description">
+                        I know AWS. Trust me man
+                    </p>
+
+                    <div class="skills__bar">
+                        <div class="skills__percentage">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills__item">
+                    <div class="skills__titles">
+                        <h3 class="skills__name">HTML, CSS, JavaScript</h3>
+                        <span class="skills__no"></span>
+                    </div>
+
+                    <p class="skills__description">
+                        I know AWS. Trust me man
+                    </p>
+
+                    <div class="skills__bar">
+                        <div class="skills__percentage">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--============== PORTFOLIO =================-->
+        <section class="works section" id="works">
+            <h2 class="section__title title-center" data-title="My Portfolio">
+                Recent works
+            </h2>
+
+            <div class="work__container container grid">
+                <div class="work__card">
+                    <img src="assets/project-1.png" alt="" class="work__img" />
+
+                    <div class="work__details">
+                        <h3 class="work__title">Web Design</h3>
+                        <span class="work__description">This is a short description</span>
+                    </div>
+                </div>
+
+                <div class="work__card">
+                    <img src="assets/project-2.png" alt="" class="work__img" />
+
+                    <div class="work__details">
+                        <h3 class="work__title">IaC</h3>
+                        <span class="work__description">This is a short description</span>
+                    </div>
+                </div>
+
+                <div class="work__card">
+                    <img src="assets/project-3.png" alt="" class="work__img" />
+
+                    <div class="work__details">
+                        <h3 class="work__title">Cloud Resume Challenge</h3>
+                        <span class="work__description">This is a short description</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--============== CONTACT =================-->
+        <section class="contact section" id="contact">
+            <h2 class="section__title title-center" data-title="Get in touch">
+                Contact Me
+            </h2>
+
+            <div class="contact__container container grid">
+                <div class="contact__details">
+
+                    <div class="contact__item">
+                        <i class="fa-solid fa-envelope contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">Email</h3>
+                            <span class="contact__data">jullyachenchi8@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <form action="" class="contact__form">
+                        <div class="form__group">
+                            <div class="form__input">
+                                <input type="text" placeholder="Name" class="input__control" />
+                            </div>
+
+                            <div class="form__input">
+                                <input type="email" placeholder="Email" class="input__control" />
+                            </div>
+
+                            <div class="form__input">
+                                <input type="text" placeholder="Subject" class="input__control" />
+                            </div>
+
+                            <div class="form__input">
+                                <textarea name="" id="" placeholder="Message" cols="30" rows="10" class="input__control textarea"></textarea>
+                            </div>
+                            <button class="btn contact__btn">Send Message</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </section> 
+
+        
+    </main>
+
+    <!--===================== FOOTER =================-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <p class="footer__copyright">&copy; 2024. All rights resesrved</p>
+
+            <div class="footer__social-links">
+                <a href="" class="footer__social-link">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+
+                <a href="" class="footer__social-link">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+
+            </div>
+        </div>
+    </footer>
+
+    <!--========= MAIN JS ==========-->
+    <script src="main.js"></script>
+</body>
+</html>
