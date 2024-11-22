@@ -24,3 +24,9 @@ jobs:
           run: |
             aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --exclude ".git/*" --delete
 
+        - name: Invalidate cache
+          uses: chetan/invalidate-cloudfront-action@v2
+          env:
+            DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION }}
+            PATHS: "/*"
+
