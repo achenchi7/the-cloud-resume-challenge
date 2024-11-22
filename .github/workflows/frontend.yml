@@ -3,7 +3,7 @@ name: S3 Deployment Workflow
 on:
     push:
         branches:
-            - master
+            - main
 
 jobs:
     deploy:
@@ -24,15 +24,3 @@ jobs:
           run: |
             aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --exclude ".git/*" --delete
 
-    invalidate-cloudfront-cache:
-        needs: deploy
-        runs-on: ubuntu-latest
-        steps:
-            - name: Invalidate CloudFront
-              uses: chetan/invalidate-cloudfront-action@v2
-              env: 
-                DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION }}
-                PATHS: "/*"
-                aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-                aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
-                aws-region: us-east-1
