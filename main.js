@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const data = await response.json();
                 console.log(data);  // Log the entire response object to check the data
                 if (data && data.visits) {
-                    counter.textContent = `Number of page visits: ${data.visits}`;  // Update the counter
+                    counter.textContent = `This page has been viewed ${data.visits} times`;  // Update the counter
                 } else {
                     console.error("Visitor count not found in response:", data);
                 }
