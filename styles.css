@@ -605,6 +605,7 @@ img{
 .resume__subtitle {
     font-size: var(--larger-font-size);
     cursor: pointer;
+    color: #695280;
 }
 
 .resume__icon {
@@ -721,63 +722,84 @@ img{
 }
 
 /*================== PORTFOLIO ==============*/
-.work__container {
+.work{
+    background-color: var(--first-color-light);
+    transition: background-color .4s;
+   
+}
+
+.work__container{
+    row-gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
 }
 
-.work__card {
+.work__card{
+    padding: 1rem 1rem 2rem;
+    transition:  .4s;
+}
+
+.work__image{
     position: relative;
-    cursor: pointer;
+    margin-bottom: .75rem;
 }
 
-.work__img {
-    vertical-align: middle;
-}
-
-.work__details {
+.work__button{
     position: absolute;
-    inset: 0;
-    background-color: hsla(0, 0%, 0%, 0.5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: all .4s ease-in-out;
+    right: 1rem;
+    bottom: -1.5rem;
+    padding: 1rem;
 }
 
-.work__img,
-.work__details {
-    border-radius: .5rem;
+.work__description{
+    margin-bottom: 1.25rem;
+    color: var(--title-color);
 }
 
-.work__title {
+
+.work__title{
     font-size: var(--h3-font-size);
+    margin-bottom: .75rem;
+    color: var(--first-color-light);
 }
 
-.work__title,
-.work__description {
-    color: var(--white);
-    transform: translateY(1.5rem);
-    transition: all .3s ease-in-out;
+.work__buttons{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
 }
 
-.work__description {
-    font-size: var(--large-font-size);
+.work__link{
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+    color: var(--first-color-light);
+    font-size: var(--h3-font-size);
+    font-weight: var(--weight-400);
+    transition: color .4s;
 }
 
-/* work hover */
-.work__card:hover .work__details {
-    opacity: 1;
+.work__link i{
+    font-size: 2rem;
+    color: var(--first-color-light);
+    transition: color .4s;
 }
 
-.work__card:hover :is(.work__title, .work__description) {
-    transform: translateY(0);
+.work__duration{
+    padding-right: 1rem;
+}
+
+.work__link:hover,
+.work__link i:hover{
+    color: var(--text-color);
+}
+
+.work__card:hover{
+    background-color: #695280;
 }
 
 /*================ CONTACT ================*/
 .contact__container {
-    grid-template-columns: 5fr 7fr;
+    grid-template-columns: 5fr ,1fr;
     align-items: flex-start;
 }
 
@@ -807,7 +829,7 @@ img{
 
 .form__group {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(5fr, 7fr);
     column-gap: 1.25rem;
 }
 
@@ -827,7 +849,8 @@ img{
 }
 
 .contact__btn {
-    float: left;
+    background-color: var(--first-color);
+    cursor: pointer;
 }
 
 
