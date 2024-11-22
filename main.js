@@ -1,48 +1,3 @@
-/*=========== Active link=============*/
-const navlink = document.querySelectorAll('.nav__link');
-
-function activeLink() {
-    navlink.forEach((a) => a.classList.remove('active-link'));
-    this.classList.add('active-link');
-}
-
-navlink.forEach((a) => a.addEventListener('click', activeLink));
-
-
-
-/*============= Background header ==========*/
-function scrollHeader() {
-    const header = document.getElementById('header');
-    //when the scroll is greater than 50 viewpoint height, add the scroll-header class to header tag
-    if (this.scrollY >= 50) header.classList.add('scroll-header');
-    else header.classList.remove('scroll-header');
-}
-
-window.addEventListener('scroll', scrollHeader);
-
-
-
-
-
-/*============= Mixitup Filter ==========*/
-let mixerProjects = mixitup('.projects__container', {
-    selectors: {
-        target: '.project__item',
-    },
-    animation: {
-        duration: 300,
-    },
-});
-
-/*Active work*/
-const linkWork = document.querySelectorAll('.category__btn');
-
-function activeWork() {
-    linkWork.forEach((a) => a.classList.remove('active-work'));
-    this.classList.add('active-work');
-}
-
-linkWork.forEach((a) => a.addEventListener('click', activeWork));
 
 
 /*=============== EMAIL JS ===============*/
@@ -77,10 +32,10 @@ contactForm.addEventListener('submit', sendEmail)
 
 
 // JS code to display views
-const counter = document.querySelector(".count-number");
+/*const counter = document.querySelector(".count-number");
 async function updateCounter() {
     try {
-        const response = await fetch("https://g37as1k6b9.execute-api.us-east-1.amazonaws.com/api-stage/countVisitors")
+        const response = await fetch("https://ezv1ti2rw2.execute-api.us-east-1.amazonaws.com/api-stage/countVisitors")
 
         if (response.ok) {
             const data = await response.json();
@@ -92,4 +47,32 @@ async function updateCounter() {
         console.error("An error occurred:", error);
     }
 }
-updateCounter();
+updateCounter();*/
+
+document.addEventListener("DOMContentLoaded", () => {
+    const counter = document.querySelector(".count-number");
+
+    async function updateCounter() {
+        console.log("Fetching visitor count...");  // Debugging line
+        try {
+            const response = await fetch("https://ezv1ti2rw2.execute-api.us-east-1.amazonaws.com/api-stage/countVisitors");
+
+            if (response.ok) {
+                const data = await response.json();
+                console.log(data);  // Log the entire response object to check the data
+                if (data && data.visits) {
+                    counter.textContent = `Number of page visits: ${data.visits}`;  // Update the counter
+                } else {
+                    console.error("Visitor count not found in response:", data);
+                }
+            } else {
+                console.error("Failed to update counter. Status:", response.statusText);
+            }
+        } catch (error) {
+            console.error("An error occurred while fetching the visitor count:", error);
+        }
+    }
+
+    updateCounter();
+});
+
