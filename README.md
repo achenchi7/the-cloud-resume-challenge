@@ -18,7 +18,7 @@
 - AWS Certificate Manager
 
 ## Architecture
-[Architecture diagram here]
+![Architecture diagram]([assets/archi-diagram new.png](https://github.com/achenchi7/the-cloud-resume-challenge/blob/main/assets/archi-diagram%20new.png))
 
 ## Frontend 
 Frontend development involved building my website in HTML, CSS, and JavaScript, hosting my website on S3, serving the website contents through CloudFront and accessing the website using a custom domain name from Route 53.
