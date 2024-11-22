@@ -24,9 +24,12 @@ jobs:
           run: |
             aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --exclude ".git/*" --delete
 
+        - name: Confirm files are synced to S3
+          run: aws s3 ls s3://${{ secrets.S3_BUCKET_NAME }}/ --recursive
+
         - name: Invalidate cache
           uses: chetan/invalidate-cloudfront-action@v2
           env:
             DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION }}
-            PATHS: "/index.html"
+            PATHS: "/index.html /style.css /main.js"
 

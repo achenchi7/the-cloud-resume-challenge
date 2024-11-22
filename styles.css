@@ -369,7 +369,7 @@ img{
 /*============== HOME ============*/
 .home {
     background-color: var(--container-color);
-    padding-block: 9rem 3rem;
+    padding-block: 5rem 3rem;
 }
 .home__container{
     grid-template-columns: repeat(2, 1fr);
@@ -377,7 +377,7 @@ img{
 }
 
 .home__small {
-    font-size: var(--large-font-size);
+    font-size: var(--larger-font-size);
     font-weight: var(--weight-600);
     letter-spacing: 1px;
 }
