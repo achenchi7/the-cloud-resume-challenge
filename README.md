@@ -1,8 +1,11 @@
 # Cloud Resume Challenge
 ## Introduction
-**Project Overview** - This is my implementation of the cloud resume challenge as coined by Forrest Brazeal, where I create a resume website using HTML, CSS, and JavaScript and host it on AWS 
+**Project Overview** - This is my implementation of the [cloud resume challenge](https://cloudresumechallenge.dev/) as coined by [Forrest Brazeal](https://www.linkedin.com/in/forrestbrazeal/), where I create a resume website using HTML, CSS, and JavaScript and host it on AWS 
 
 **Final outcome** - A working website with a custom domain name. It also shows the number of times the website has been viewed.
+
+You can view my website [here](https://resume.jullyachenchi.com/)
+
 
 **Technologies used**
 - HTML, CSS, JavaScript
