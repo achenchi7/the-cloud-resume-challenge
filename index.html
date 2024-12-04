@@ -3,527 +3,503 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal website v4</title>
 
-    <!--=============== FAVICON ===============-->
-    <link rel="stylesheet" href="assets/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
-    <!--=============== REMIXICONS ===============-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
 
-    <!--=============== CSS===============-->
-    <link rel="stylesheet" href="styles.css" >
-
-    <title>My website</title>
+    <title>My Website</title>
 </head>
 <body>
+    <!--Header and nav-->
+    <header class="main-header">
+        <nav class="navbar header-nav navbar-expand-lg">
+            <div class="container">
+                <!--Brand name/logo-->
+                <a href="" class="navbar-brand">
+                    <h4 class="mb-0">Jully <span class="text-primary">Achenchi
+                    </span></h4>
+                </a>
 
-    <!--======================STYLE SWITCHER============-->
-    <input type="radio" name="color" id="color-1" />
-    <input type="radio" name="color" id="color-2" />
-    <input type="radio" name="color" id="color-3" />
-    <input type="radio" name="color" id="color-4" />
-    <input type="radio" name="color" id="color-5" />
-    <input type="radio" name="color" id="color-6" />
-    <input type="radio" name="color" id="color-7" />
-    <input type="radio" name="color" id="color-8" />
-    <input type="radio" name="color" id="color-9" />
-    <input type="radio" name="color" id="color-10" />
-    <input type="checkbox" id="day-night" />
-    <input type="checkbox" id="toggler" />
-
-    <div class="style__switcher">
-        <label for="toggler" class="style__switcher-toggler">
-            <i class="fa-solid fa-gear fa-spin"></i>
-        </label>
-
-        <label for="day-night" class="style__switcher-theme">
-            <i class="fa-solid fa-sun"></i>
-            <i class="fa-solid fa-moon"></i>
-        </label>
-
-        <h3 class="style__switcher-title">Theme Colors</h3>
-
-        <div class="style__switcher-colors">
-            <label for="color-1" class="color-1 color" ></label>
-            <label for="color-2" class="color-2 color" ></label>
-            <label for="color-3" class="color-3 color" ></label>
-            <label for="color-4" class="color-4 color" ></label>
-            <label for="color-5" class="color-5 color" ></label>
-            <label for="color-6" class="color-6 color" ></label>
-            <label for="color-7" class="color-7 color" ></label>
-            <label for="color-8" class="color-8 color" ></label>
-            <label for="color-9" class="color-9 color" ></label>
-            <label for="color-10" class="color-10 color" ></label>
-        </div>
-    </div>
-
-    <!--======================HEADER================-->
-    <header class="header">
-        <nav class="nav container">
-            <a href="" class="nav__logo">Jully Achenchi</a>
-
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="#home" class="nav__link active-link">Home</a>
-                </li>
-
-                <!--<li class="nav__item">
-                    <a href="#about" class="nav__link">About</a>
-                </li>-->
-
-                <li class="nav__item">
-                    <a href="#qualification" class="nav__link">Experience</a>
-                </li>
-
-                <li class="nav__item">
-                    <a href="#works" class="nav__link nav__link-button">Portfolio</a>
-                </li>
+                <!--Menu-->
+                <div class="collapse navbar-collapse justify-content-end"
+                id="navbar-collapse-toggle">
+                    <ul class="navbar-nav mx-auto">
+                        <li>
+                            <a href="#home" class="nav-link">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="nav-link">About me</a>
+                        </li>
+                        <li>
+                            <a href="#services" class="nav-link">Services</a>
+                        </li>
+                        <li>
+                            <a href="#skills" class="nav-link">Skills</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio" class="nav-link">Portfolio</a>
+                        </li>
+                    </ul>
                 
-            </ul>
+                </div>
+                <!--Button-->
+                <div class="ms-auto d-none d-lg-block">
+                    <a class="colored-btn" href="#contact">Contact Me</a>
+                </div>
+
+                <!--Mobile menu toggle-->
+                <button class="navbar-toggler collapsed" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-collapse-toggle">
+                   <span></span>
+                   <span></span> 
+                   <span></span>  
+                </button>
+            </div>
         </nav>
     </header>
 
-    <!--====================== MAIN ================-->
-    <main class="main">
-        <!--============== HOME =================-->
-        <section class="home" id="home">
-            <div class="home__container container grid">
-                <div class="home__content">
-                    <span class="home__small">Hello,</span>
-                    <h1 class="home__title">
-                        <span>I am</span> Jully Achenchi, <br />
-                        a <span>Juniour Cloud/DevOps Engineer</span>
-                    </h1>
-
-                    <p class="home__description">
-                        I love solving problems with cloud technology and sharing what I learn along the way.
-                    </p>
-
-                    <div class="home__btns">
-                        <a download href="assets/Jully Achenchi_CV_Cloud_Eng.pdf" class="btn">Download CV</a>
-                        <a href="#works" class="btn btn--transparent">Portfolio</a>
-                    </div>
-
-                    <!--======== WEBSITE COUNTER ========-->
-                    <div class="website-counter">
-                        <p class="count-description"></p>
-                        <p class="count-number"></p>
-                    </div>
+    <!-- Main -->
+     <main>
+        <!-- Home Section -->
+         <section id="home" class="home-section bg-gray">
+            <div class="container">
+                <div class="anim-elements">
+                    <div class="anim-element"><i class='bx bxl-aws'></i></div>
+                    <div class="anim-element"><i class='bx bxl-html5'></i></div>
+                    <div class="anim-element"><i class='bx bxl-python'></i></div>
+                    <div class="anim-element"><i class='bx bxl-css3'></i></div>
+                    <div class="anim-element"><i class='bx bxl-javascript'></i></div>
                 </div>
-
-                <div class="home__img-wrapper">
-                    <img src="assets/Profile_img.png" alt="" class="home__img" />
+                <div class="row gy-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="home-intro text-center text-lg-start">
+                            <h6>Hi, My name is Jully</h6>
+                            <h1>I am a <span id="type-it">Junior Cloud/DevOps Engineer</span></h1>
+                            <p>I love solving problems with cloud technology and sharing what I learn along the way.</p>
+                                <div class="col-lg-6">
+                                    <p class="count-description"></p>
+                                    <p class="count-number"></p>
+                                </div>
+                            <a download href="assets/Files/Jully Achenchi_CV_Cloud_Eng.pdf" class="colored-btn mt-1">
+                                Download CV
+                            </a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 pt-4 pt-lg-8">
+                        <div class="home-image text-center">
+                            <img src="Profile_img.jpg" alt="">
+                        </div>
+                        
+                    </div>
+                    
                 </div>
             </div>
-        </section>
-
-        <!--============== ABOUT =================-->
-        <!--<section class="about section" id="about">
-            <div class="about__container container grid">
-                <div class="about__img-wrapper">
-                    <img src="assets/Profile_img-1.jpg" alt="" class="about__img" />
-                    <img src="assets/Profile_img-1.jpg" alt="" class="about__img" />
-                    <img src="assets/Profile_img-1.jpg" alt="" class="about__img" />
-                    <img src="assets/Profile_img-1.jpg" alt="" class="about__img" />
-                    
-                    
+         </section>
+        <!-- About Section -->
+         <section id="about" class="section">
+            <div class="container">
+                <div class="row gy-5 align-items-center">
+                    <div class="col-lg-6 text-center">
+                        <img src="assets/images/Picture-1.jpg" alt="">
+                    </div>
+                    <div class="col-lg-6 ps-lg-5">
+                        <div class="about-text">
+                            <h3 class="h1 mb-3 text-dark fw-semibold">Lost in 
+                                the cloud (on purpose)
+                            </h3>
+                            <p>
+                                Practical cloud solutions with a sprinkle of innovation and a 
+                                lot of curiosity
+                            </p>
+                            <div class="row pt-2">
+                                <div class="col-6 col-md-4">
+                                    <h5 class="text-primary fw-semibold fs-4 
+                                    mb-0">2+</h5>
+                                    <span class="text-dark">Projects Completed</span>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <h5 class="text-primary fw-semibold fs-4 
+                                    mb-0">2+</h5>
+                                    <span class="text-dark">Projects Completed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
                 </div>
+            </div>
+         </section>
+          
 
-                <div class="about__content">
-                    <h2 class="section__title" data-title="Who am I?">
-                        I'm Jully Achenchi, a juniour Cloud/DevOps Engineer
-                    </h2>
-
-                    <p class="about__description">
-                        Well, I will figure this out before the website goes online. Hopefully
-                        not some generic text.
-                    </p>
-
-                    <ul class="about__data grid">
-                        <li class="data__item">
-                            <h3 class="data__title">Name</h3>
-                            <span class="data__description">Jully Achenchi</span>
-                        </li>
-
-                        <li class="data__item">
-                            <h3 class="data__title">Location</h3>
-                            <span class="data__description">Nairobi, Kenya</span>
-                        </li>
-                        
-                        <li class="data__item">
-                            <h3 class="data__title">Interests</h3>
-                            <span class="data__description">Volleyball, Reading, Cycling</span>
-                        </li>
-                        
-                    </ul>
-                    <div class="about__bottom">
-                        <a download="" href="Jully Achenchi_CV_.pdf" class="btn">Download Cv</a>
-
-                        <div class="about__social-links">
-                            <a href="https://www.linkedin.com/in/jully-achenchi/" target="_blank" class="about__social-link">
-                                <i class="fa-brands fa-linkedin"></i> 
-                            </a>
-                            <a href="https://github.com/achenchi7" target="_blank" class="about__social-link">
-                                <i class="fa-brands fa-github"></i> 
-                            </a>
-
-
+        <!-- Services Section -->
+        <!--<section id="services" class="section bg-gray">
+                <div class="container">
+                    <div class="section-heading">
+                        <h3>My Services</h3>
+                    </div>
+                    <div class=" row gy-4">
+                        <div class="col-md-6">
+                            <div class="feature-box bg-1">
+                                <div class="icon"><i class='bx bx-brush'></i></div>
+                                <div class="content">
+                                    <h5>Web design</h5>
+                                    <p>I create beautiful, responsive and intuitive websites</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-box bg-2">
+                                <div class="icon"><i class='bx bxl-aws'></i></div>
+                                <div class="content">
+                                    <h5>Cloud Management</h5>
+                                    <p>I create beautiful, responsive and intuitive websites</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-box bg-3">
+                                <div class="icon"><i class='bx bx-brush'></i></div>
+                                <div class="content">
+                                    <h5>UI/UX</h5>
+                                    <p>I create beautiful, responsive and intuitive websites</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-box bg-4">
+                                <div class="icon"><i class='bx bx-brush'></i></div>
+                                <div class="content">
+                                    <h5>UI/UX</h5>
+                                    <p>I create beautiful, responsive and intuitive websites</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
         </section>-->
 
-        <!--============== QUALIFICATION =================-->
-        <section class="qualification section" id="qualification">
-            <h2 class="section__title title-center" data-title="My journey">
-                Qualifications
-            </h2>
-
-            <div class="resume__container container grid" >
-                <div class="resume__group">
-                    <h3 class="resume__heading">Experience</h3>
-
-                    <div class="resume__items">
-                        <div class="resume__item">
-                            <div class="resume__header">
-                                <h3 class="resume__subtitle">ALX Chatroom Ambassandor</h3>
-                                <span class="resume__icon"></span>
+           <!-- Skills -->
+            <section id="skill" class="section bg-gray">
+                <div class="container">
+                    <div class="row gy-5">
+                        <div class="col-lg-6">
+                            <div class="section-heading text-start">
+                                <h3>My Skills</h3>
                             </div>
-
-                            <div class="resume__content">
-                                <div class="resume__data-title">
-                                    <h3 class="resume__title">ALX Africa</h3>
-                                    <span class="resume__date">Aug 2024 - Nov 2024</span>
-                                </div>
-
-                                <p class="resume__description">
-                                    <li class="experience_list1">Hosted bi-weekly AWS events to drive peer learning and networking</li>
+                            <div class="skill-box">
+                                <div class="row g-3">
+                                    <div class="col-6 col-md-4 col-lg-6">
+                                        <div class="feature-box feature-box-small bg-1">
+                                            <div class="icon">
+                                                <i class='bx bxl-html5'></i>
+                                            </div>
+                                            <h6>HTML/CSS</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-6">
+                                        <div class="feature-box feature-box-small bg-2">
+                                            <div class="icon">
+                                                <i class='bx bxl-javascript'></i>
+                                            </div>
+                                            <h6>JavaScript</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-6">
+                                        <div class="feature-box feature-box-small bg-3">
+                                            <div class="icon">
+                                                <i class='bx bxl-docker'></i>
+                                            </div>
+                                            <h6>Docker</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-6">
+                                        <div class="feature-box feature-box-small bg-4">
+                                            <div class="icon">
+                                                <i class='bx bxl-github'></i>
+                                            </div>
+                                            <h6>GitHub/Actions</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-6">
+                                        <div class="feature-box feature-box-small bg-5">
+                                            <div class="icon">
+                                                <i class='bx bxl-aws'></i>
+                                            </div>
+                                            <h6>AWS Services</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg-6">
+                                        <div class="feature-box feature-box-small bg-6">
+                                            <div class="icon">
+                                                <i class='bx bxl-aws'></i>
+                                            </div>
+                                            <h6>AWS Services</h6>
+                                        </div>
+                                    </div>
                                     
-                                    <li class="experience_list2">Served as a key contact for learners, addressing inquiries and advocating for their needs, leading to an increase in learner satisfaction</li>
-
-                                    <li class="experience_list3">Regurlarly gathered feedback from learners to drive improvements and enhance the community experience.
-                                        experience.</li>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="resume__item">
-                            <div class="resume__header">
-                                <h3 class="resume__subtitle">Mobalytics Remote Externship</h3>
-                                <span class="resume__icon"></span>
-                            </div>
-
-                            <div class="resume__content">
-                                <div class="resume__data-title">
-                                    <h3 class="resume__title">Extern</h3>
-                                    <span class="resume__date">Apr 2024 - May 2024</span>
                                 </div>
 
-                                <p class="resume__description">
-                                    <li class="experience_list1"> Conducted market research on games like Pokémon Go and Fortnite, focusing on player psychology.</li>
-                                       
-                                    <li class="experience_list2">Created and submitted a presentation with key insights and recommendations for Mobalytics on market expansion.</li>
-                                </p>
                             </div>
                         </div>
-
-                        <div class="resume__item">
-                            <div class="resume__header">
-                                <h3 class="resume__subtitle">Esri Easten Africa</h3>
-                                <span class="resume__icon"></span>
-                            </div>
-
-                            <div class="resume__content">
-                                <div class="resume__data-title">
-                                    <h3 class="resume__title">Intern</h3>
-                                    <span class="resume__date">Jan 2022 - Apr 2024</span>
-                                </div>
-
-                                <p class="resume__description">
-                                    <li class="experience_list1"> Assisted in the development of an ArcGIS tool to streamline the land acquisition process,
-                                        facilitating accurate determination of land area and compensation amounts</li>
-                                    
-                                    <li class="experience_list2">Led a team in integrating ArcGIS PRO, Survey 123, Field Maps, dashboards, and a web app to
-                                        enable effective project monitoring and evaluation for a non-profit organization</li>
-                                        
-                                    <li class="experience_list3">Developed a presentation outlining key findings in the project, leading to a successful
-                                        completion</li>
-                                </p>
-                            </div>
+                        <div class="col-lg-6 text-center">
+                            <img src="assets/images/Pic-skills.png" alt="">
                         </div>
-
-
                     </div>
+                </div>
+            </section>
 
+            <!-- Work Section -->
+             <section id="portfolio" class="section">
+                <div class="container">
+                    <div class="section-heading">
+                        <h3>Latest Projects</h3>
+                    </div>
+                    <div class="portfolio-box">
+                        <div class="row gx-3 gy-4 pb-3 mb-5 pb-lg-3 mb-lg-3
+                        justify-content-around align-items-center">
+                            <div class="col-md-6 col-lg-5">
+                                <div class="portfolio-img">
+                                    <img src="assets/images/project1-rwd.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-5">
+                                <div class="portfolio-text">
+                                    <span>Web design</span>
+                                    <h4>Responsive Web Design</h4>
+                                    <p>I wrote this website from scratch using HTML, CSS, and JavaScript</p>
+                                    <a href="" class="colored-btn mt-1">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row gx-3 gy-4 pb-3 mb-5 pb-lg-3 mb-lg-3
+                        justify-content-around align-items-center flex-row-reverse">
+                            <div class="col-md-6 col-lg-5">
+                                <div class="portfolio-img">
+                                    <img src="assets/images/project2-crc.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-5">
+                                <div class="portfolio-text">
+                                    <span>AWS</span>
+                                    <h4>Cloud Resume Challenge</h4>
+                                    <p>A project that combines AWS technologies (S3, DynamoDB, Lambda, API Gateway, etc), coding (Python), and 
+                                       automation (CI/CD) to build and deploy a personal resume website.
+                                    </p>
+                                    <a href="https://github.com/achenchi7/the-cloud-resume-challenge" target="_blank" class="colored-btn mt-1">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="resume__group">
-                    <h3 class="resume__heading">Education</h3>
-
-                    <div class="resume__items">
-                        <div class="resume__item">
-                            <div class="resume__header">
-                                <h3 class="resume__subtitle">AWS Cloud Computing</h3>
-                                <span class="resume__icon"></span>
-                            </div>
-
-                            <div class="resume__content">
-                                <div class="resume__data-title">
-                                    <h3 class="resume__title">ALX Africa</h3>
-                                    <span class="resume__date">Mar 2024 - Nov 2024</span>
-                                </div>
-
-                                <p class="resume__description">
-                                    
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="resume__item">
-                            <div class="resume__header">
-                                <h3 class="resume__subtitle">BSc. Geospatial Information Science</h3>
-                                <span class="resume__icon"></span>
-                            </div>
-
-                            <div class="resume__content">
-                                <div class="resume__data-title">
-                                    <h3 class="resume__title">Jomo Kenyatta University of Agriculture and Technology</h3>
-                                    <span class="resume__date">Sep 2018 - Dec 2023</span>
-                                </div>
-
-                                <p class="resume__description">
-                                    
-                                </p>
-                            </div>
-                        </div>
-
-
-
+             </section>
+             <!-- Testimonial Section -->
+              <!--<section class="section bg-gray">
+                <div class="container">
+                    <div class="section-heading">
+                        <h3>Echoes of brilliance</h3>
                     </div>
+                    <div>
+                        <div class="feature-box-small mb-4">
+                            <div class="img">
+                                <img src="assets/images/aws-certified-solutions-architect-associate (1).png" alt="">
+                            </div>
+                            <div class="content">
+                                
+                                <a href="" class="colored-btn mt-1">View badge</a>
 
+                            </div>
+                        </div>
+                        <div class="feature-box mb-4">
+                            <div class="img1">
+                                <img src="assets/images/Picture-2.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <p class="mb-3">
+                                    Recognized on ALX's wall of fame for helping other learners
+                                    navigate their learning at ALX
+                                </p>
+                                <h6 class="mb-0 text-dark fw-semibold">Mona Harisa</h6>
+                                <small>ALX-AWS Program manager</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </section>-->
+
+              <!-- Experience Section -->
+            <section id="experience" class="section bg-gray">
+                <div class="container">
+                    <div class="section-heading">
+                        <h3>Experience</h3>
+                    </div>
+                    <div class="row gy-4">
+                        <div class="col-md-4">
+                            <h4>ALX Chatroom Ambassador</h4>
+                            <p>ALX Kenya | Aug 2024 - Nov 2024</p>
+                            <p>
+                                <li>Served as a point of contact for AWS learners, addressing their inquiries and advocating for their needs that led to a 30% increase in learner satisfaction</li>
+                                <li>Regularly gathered feedback from learners to implement improvements to enhance community experience</li> 
+                            </p>
+                        </div>
+                    <div class="col-md-4">
+                        <h4>Intern</h4>
+                        <p>Esri Eastern Africa | Jan 2022 - Apr 2022</p>
+                        <p>	Assisted in the development of an ArcGIS tool to streamline the land acquisition process, facilitating accurate determination of land area and compensation amounts.</p>
+                    </div>
+                    <!--<div class="col-md-4">
+                        <h4>IT Support Specialist</h4>
+                        <p>ABC Corporation | Jan 2021 - May 2022</p>
+                        <p>Provided technical support to over 200 employees and managed network infrastructure upgrades.</p>
+                    </div>-->
                 </div>
             </div>
         </section>
 
-        <!--============== SKILLS =================-->
-        <section class="skills section" id="skills">
-            <h2 class="section__title title-center" data-title="Skills">
-                Professional Skills
-            </h2>
-            <div class="skills__container container grid">
-                <div class="skills__item">
-                    <div class="skills__titles">
-                        <h3 class="skills__name">AWS</h3>
-                        <span class="skills__no"></span>
-                    </div>
-
-            
-                    <div class="skills__bar">
-                        <div class="skills__percentage">
-                            <span></span>
-                        </div>
-                    </div>
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <h3>Education</h3>
                 </div>
-
-                <div class="skills__item">
-                    <div class="skills__titles">
-                        <h3 class="skills__name">Terraform</h3>
-                        <span class="skills__no"></span>
-                    </div>
-
+                <div class="row gy-4">
                     
-
-                    <div class="skills__bar">
-                        <div class="skills__percentage">
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skills__item">
-                    <div class="skills__titles">
-                        <h3 class="skills__name">Docker</h3>
-                        <span class="skills__no"></span>
-                    </div>
-
-
-                    <div class="skills__bar">
-                        <div class="skills__percentage">
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skills__item">
-                    <div class="skills__titles">
-                        <h3 class="skills__name">HTML, CSS, JavaScript</h3>
-                        <span class="skills__no"></span>
-                    </div>
-
-                    <div class="skills__bar">
-                        <div class="skills__percentage">
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
-        </section>
-
-        <!--============== PORTFOLIO =================-->
-        <section class="works section" id="works">
-            <h2 class="section__title title-center" data-title="My Portfolio">
-                Recent works
-            </h2>
-
-            <div class="work__container container grid">
-                <article class="work__card">
-                    <div class="work__image">
-                        <img src="assets/project-3.png" alt="image" class="work__img">
-                
-                        <a href="#" class="work__button button">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-                
-                    <div class="work__details">
-                        <h3 class="work__title">Cloud Resume Challenge</h3>
-                
-                        <p class="work__description">
-                            A project to build and host a personal website using AWS, combining front-end, 
-                            back-end, and infrastructure automation.
-                        </p>
-                    </div>
-                
-                    <div class="work__buttons">
-                        <a href="https://github.com/achenchi7/30-Days-cloud-challenge-" target="_blank" class="work__link">
-                            <i class="fa-brands fa-github"></i>View
-                        </a>
-                    </div>
-                </article>
-
-                <!--<article class="work__card">
-                    <div class="work__image">
-                        <img src="assets/project-3.png" alt="image" class="work__img">
-                
-                        <a href="#" class="work__button button">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-                
-                    <div class="work__details">
-                        <h3 class="work__title">Web design</h3>
-                
-                        <p class="work__description">
-                            Took part in the challenge organized by the Cozy cloud Crew
-                            in order to learn the fundamentals of AWS cloud such as Compute 
-                            using EC2
-                        </p>
-                    </div>
-                
-                    <div class="work__buttons">
-                        <a href="https://github.com/achenchi7/30-Days-cloud-challenge-" target="_blank" class="work__link">
-                            <i class="fa-brands fa-github"></i>View
-                        </a>
-                    </div>
-                </article>-->
-
-                <article class="work__card">
-                    <div class="work__image">
-                        <img src="assets/project-3.png" alt="image" class="work__img">
-                
-                        <a href="#" class="work__button button">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-                
-                    <div class="work__details">
-                        <h3 class="work__title">30 Days AWS cloud challenge</h3>
+                    <div class="col-md-6">
+                        <h4>AWS Cloud Computing</h4>
+                        <p>ALX Africa | Mar 2024 - Nov 2024</p>
                         
-                        <p class="work__description">
-                            Took part in the challenge organized by the Cozy cloud Crew
-                            in order to learn the fundamentals of AWS cloud.
-                        </p>
                     </div>
-                
-                    <div class="work__buttons">
-                        <a href="https://github.com/achenchi7/30-Days-cloud-challenge-" target="_blank" class="work__link">
-                            <i class="fa-brands fa-github"></i>View
-                        </a>
+                    <div class="col-md-6">
+                        <h4>Bachelor of Science in Geospatial Information Science</h4>
+                        <p>Jomo Kenyatta University of Agriculture and Technology | 2018 - 2023</p>
+                        
                     </div>
-                </article>
+                </div>
             </div>
         </section>
 
-        <!--============== CONTACT =================-->
-        <section class="contact section" id="contact">
-            <h2 class="section__title title-center" data-title="Get in touch">
-                Contact Me
-            </h2>
-
-            <div class="contact__container container grid">
-                <div class="contact__details">
-
-                    <form action="" class="contact__form" id="contact-form">
-                        <div class="form__group">
-                            <div class="form__input">
-                                <input type="text" placeholder="Name" class="input__control" />
-                            </div>
-
-                            <div class="form__input">
-                                <input type="email" placeholder="Email" class="input__control" />
-                            </div>
-
-                            <div class="form__input">
-                                <input type="text" placeholder="Subject" class="input__control" />
-                            </div>
-
-                            <div class="form__input">
-                                <textarea name="" id="" placeholder="Message" cols="30" rows="10" class="input__control textarea"></textarea>
-                            </div>
-                            
-
-
-                            <button type="submit" class="btn contact__btn">
-                                <i class="fa-solid fa-paper-plane"></i>Send Message
-                            </button>
-
-                            
-                        </div>
-                        
-                    </form>
+        <!-- Certifications Section -->
+        <section id="certifications" class="section bg-gray">
+            <div class="container">
+                <div class="section-heading">
+                    <h3>Certifications</h3>
+                </div>
+                <div class="row gy-4">
+                    <div class="col-md-6">
+                        <h4>AWS Certified Solutions Architect - Associate</h4>
+                        <p>Earned: Oct 2024</p>
+                        <a href="https://www.credly.com/badges/1bd11214-c9e0-46dd-a39a-8db48dce21e3/public_url" target="_blank" class="colored-btn">View Badge</a>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>AWS Certified Cloud Practitioner</h4>
+                        <p>Earned: July 2024</p>
+                        <a href="https://www.credly.com/badges/61d20809-425a-4736-8d35-d341a0a3d2f2/public_url" target="_blank" class="colored-btn">View Badge</a>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>GitHub Foundations</h4>
+                        <p>Earned: Sep 2024</p>
+                        <a href="https://www.credly.com/badges/1f9c2fb8-d44f-4c84-b34b-577069f3aa37/public_url" target="_blank" class="colored-btn">View Badge</a>
+                    </div>
                 </div>
             </div>
-        </section> 
+        </section>
+              <!-- Contact section -->
+               <section id="contact" class="section bg-dark">
+                    <div class="container">
+                        <div class="row gy-5">
+                            <div class="col-lg-6">
+                                <div class="contact-form">
+                                    <h2 class="text-dark">Get in touch</h2>
+                                    <p class="lead">Send me a message. I will get back
+                                    to you as soon as possible
+                                    </p>
+                                    <form action="#">
+                                        <div class="row gy-4 gx-3">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label class="form-label">Name</label>
+                                                    <input type="text" class="form-control" name="name">
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label class="form-label">Email</label>
+                                                    <input type="text" class="form-control" name="email">
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label class="form-label">Subject</label>
+                                                    <input type="text" class="form-control" name="subject">
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label class="form-label">Message</label>
+                                                    <textarea name="message" rows="3" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button class="colored-btn" type="submit">Send Message</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 ms-auto col-xl-4">
+                                <div class="pb-5 d-none d-md-block">
+                                    <img src="assets/images/9907625-removebg-preview.png" class="w-100" alt="">
+                                </div>
+                                <ul class="contact-infos">
+                                    
+                                    <li>
+                                        <div class="icon bg-2">
+                                            <i class="bx bx-envelope"></i>
+                                        </div>
+                                        <div class="col ps-3">
+                                            <h5>Email</h5>
+                                            <p>jullyachenchi8@gmail.com</p>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+               </section>
+     </main>
+     <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 py-2">
+                    <div class="nav justify-content-center
+                    justify-content-md-start">
+                        <a href="#"><i class="bx bxl-linkedin"></i></a>
+                        <a href="#"><i class="bx bxl-github"></i></a>
 
-        
-    </main>
-
-    <!--===================== FOOTER =================-->
-    <footer class="footer">
-        <div class="footer__container container">
-            <p class="footer__copyright">&copy; 2024. All rights resesrved</p>
-
-            <div class="footer__social-links">
-                <a href="https://www.linkedin.com/in/jully-achenchi/" target="_blank" class="about__social-link">
-                    <i class="fa-brands fa-linkedin"></i> 
-                </a>
-                <a href="https://github.com/achenchi7" target="_blank" class="about__social-link">
-                    <i class="fa-brands fa-github"></i> 
-                </a>
-
-
+                    </div>
+                </div>
+                <div class="col-md-6 py-2 text-center text-md-end">
+                    <p class="m-0">2024 Copyright all rights reserved</p>
+                </div>
             </div>
         </div>
-    </footer>
+      </footer>
 
-    <!--============ EMAIL JS ============-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/jquery-3.7.1.min.js"></script>
+    <script src="assets/src/typed.js"></script>
+
+    <!--Email JS-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    <!--========= MAIN JS ==========-->
-    <script src="main.js" defer></script>
+    <!-- Main JS-->
+    <script src="script.js"></script>
 </body>
 </html>
