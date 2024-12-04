@@ -70,30 +70,34 @@ async function updateCounter() {
 updateCounter();*/
 
 document.addEventListener("DOMContentLoaded", () => {
-    const counter = document.querySelector(".count-number");
+    const counter = document.querySelector(".count-number"); // Target the counter element
 
     async function updateCounter() {
-        console.log("Fetching visitor count...");  // Debugging line
+        console.log("Fetching visitor count..."); // Debugging
         try {
-            const response = await fetch("https://ezv1ti2rw2.execute-api.us-east-1.amazonaws.com/api-stage/countVisitors");
+            const response = await fetch("https://g37as1k6b9.execute-api.us-east-1.amazonaws.com/api-stage/countVisitors");
 
             if (response.ok) {
                 const data = await response.json();
-                console.log(data);  // Log the entire response object to check the data
-                if (data && data.visits) {
-                    counter.textContent = `This page has been viewed ${data.visits} times`;  // Update the counter
+                console.log("API Response:", data); // Log response for debugging
+                if (data && data.visitors !== undefined) {
+                    counter.textContent = `This page has been viewed ${data.visitors} times.`; // Update the counter
                 } else {
+                    counter.textContent = "Visitor count unavailable.";
                     console.error("Visitor count not found in response:", data);
                 }
             } else {
-                console.error("Failed to update counter. Status:", response.statusText);
+                counter.textContent = "Error fetching visitor count.";
+                console.error(`HTTP error! Status: ${response.status}`);
             }
         } catch (error) {
-            console.error("An error occurred while fetching the visitor count:", error);
+            counter.textContent = "An error occurred while fetching visitor count.";
+            console.error("Error during fetch:", error);
         }
     }
 
-    updateCounter();
+    updateCounter(); // Call the function to update the counter
 });
+
 
 

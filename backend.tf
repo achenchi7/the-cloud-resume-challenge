@@ -6,13 +6,13 @@ provider "aws" {
 /* Dynamodb resource*/
 resource "aws_dynamodb_table" "visit-count-table-tr2" {
   name = "visitor-count-terraform2"
-  hash_key = "newid"
+  hash_key = "id"
   billing_mode = "PROVISIONED"
   read_capacity = 5
   write_capacity = 5
 
   attribute {
-    name = "newid"
+    name = "id"
     type = "S"
   }
   
@@ -25,11 +25,11 @@ resource "aws_dynamodb_table" "visit-count-table-tr2" {
 resource "aws_dynamodb_table_item" "table-items" {
   table_name = aws_dynamodb_table.visit-count-table-tr2.name
   hash_key = aws_dynamodb_table.visit-count-table-tr2.hash_key
-  
+
   
   item = <<ITEM
 {
-  "newid" : { "S" : "visitors-count" },
+  "id" : { "S" : "visitors-count" },
   "visitors" : { "N" : "1" }
 }
 ITEM
@@ -101,7 +101,7 @@ data "archive_file" "python-code" {
 
 resource "aws_lambda_function" "crc-lambda-func" {
     function_name = "page-count-function"
-    filename = "${path.module}/lambda/lambda-func.zip"
+    filename = data.archive_file.python-code.output_path
     role = aws_iam_role.lambda-role.arn
     handler = "lambda_function.lambda_handler"
     runtime = "python3.9"
