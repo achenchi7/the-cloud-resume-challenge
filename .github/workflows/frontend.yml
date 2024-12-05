@@ -31,5 +31,5 @@ jobs:
           uses: chetan/invalidate-cloudfront-action@v2
           env:
             DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION }}
-            PATHS: "/index.html /style.css /main.js"
+            PATHS: "/index.html /style.css /script.js"
 
