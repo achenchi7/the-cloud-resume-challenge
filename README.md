@@ -4,7 +4,7 @@
 
 **Final outcome** - A working website with a custom domain name. It also shows the number of times the website has been viewed.
 
-You can view my website [here](https://resume.jullyachenchi.com/)
+You can view my website [here](https://jullyachenchi.com/)
 
 
 **Technologies used**

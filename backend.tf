@@ -130,7 +130,7 @@ resource "aws_apigatewayv2_api" "visitor-count-crc-terraform" {
       allow_methods = [
         "GET",
         "POST"]
-      max_age = 3600
+      max_age = 100
     } 
 }
 

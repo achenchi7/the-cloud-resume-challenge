@@ -250,12 +250,12 @@ main {
 }
 
 .home-section .home-intro p {
-    font-size: 20px;
+    font-size: 30px;
 }
 
 @media (max-width: 767px) {
     .home-section .home-intro p {
-        font-size: 18px;
+        font-size: 25px;
     }
 }
 
