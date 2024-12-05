@@ -519,7 +519,7 @@ main {
 }
 
 .count-number {
-    text-align: center;
+    text-align: left;
     margin-bottom: 10px;
     color: var(--primary-color);
 }
