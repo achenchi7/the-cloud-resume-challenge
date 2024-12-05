@@ -21,11 +21,11 @@ You can view my website [here](https://jullyachenchi.com/)
 - AWS Certificate Manager
 
 ## Architecture
-![Architecture diagram](assets/arch-new.png)
+![Architecture diagram](assets/images/arch-new.png)
 
 ## Frontend 
 Frontend development involved building my website in HTML, CSS, and JavaScript, hosting my website on S3, serving the website contents through CloudFront and accessing the website using a custom domain name from Route 53.
-![frontend diagram](assets/frontend-new.png)
+![frontend diagram](assets/images/frontend-new.png)
 ### HTML and CSS
 
 ### JavaScript
@@ -40,7 +40,7 @@ Route 53 was used to register a domain name. A domain can also be referred to as
 ## Backend - Infrastructure as code
 The backend chunk of the challenge involved configuring an API Gateway that triggers a Lambda function to update and retrieve the number of page visits in a dynamodb table. The backend infrastructure was provisioned using Terraform.
 
-![backend diagram](assets/backend-new.png)
+![backend diagram](assets/images/backend-new.png)
 
 ### Database - Dynamodb
 The number of page visits is saved and retrieved from a sinle table in AWS Dynamodb
@@ -93,7 +93,7 @@ The pipeline workflow specifies the steps to be followed which includes:
 - Invalidating cache which ensures that any changes are reflected in the least amount possible. Near-real time.
 
 The pipeline workflow can be seen in `.github/workflows/frontend.yml`
-![working pipeline](assets/workflow.png)
+![working pipeline](assets/images/workflow.png)
 
 # Project costs
 The project is designed to be executed within the free tier provision. However, the additional cost incurred was:
