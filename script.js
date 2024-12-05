@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const data = await response.json();
                 console.log("API Response:", data); // Log response for debugging
                 if (data && data.visitors !== undefined) {
-                    counter.textContent = `This page has been viewed ${data.visitors} times.`; // Update the counter
+                    counter.textContent = `Page views: ${data.visitors} times.`; // Update the counter
                 } else {
                     counter.textContent = "Visitor count unavailable.";
                     console.error("Visitor count not found in response:", data);
