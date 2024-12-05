@@ -21,7 +21,7 @@ $(document).ready(function() {
 });
 
 /*=============== EMAIL JS ===============*/
-const contactForm = document.getElementById('contact-form'),
+/*const contactForm = document.getElementById('contact-form'),
       contactMessage = document.getElementById('contact-message')
 
 const sendEmail = (e) =>{
@@ -48,26 +48,8 @@ const sendEmail = (e) =>{
       
 }
 
-contactForm.addEventListener('submit', sendEmail)
+contactForm.addEventListener('submit', sendEmail)*/
 
-
-// JS code to display views
-/*const counter = document.querySelector(".count-number");
-async function updateCounter() {
-    try {
-        const response = await fetch("https://ezv1ti2rw2.execute-api.us-east-1.amazonaws.com/api-stage/countVisitors")
-
-        if (response.ok) {
-            const data = await response.json();
-            counter.textContent = `Number of page visits: ${data.visits}`;
-        } else {
-            console.error("Failed to update counter:", response.statusText)
-        }
-    } catch (error) {
-        console.error("An error occurred:", error);
-    }
-}
-updateCounter();*/
 
 document.addEventListener("DOMContentLoaded", () => {
     const counter = document.querySelector(".count-number"); // Target the counter element
