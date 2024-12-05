@@ -125,7 +125,7 @@ resource "aws_apigatewayv2_api" "visitor-count-crc-terraform" {
       allow_credentials = false
       allow_headers = []
       allow_origins = [
-        "*"
+        "https://jullyachenchi.com"
       ]
       allow_methods = [
         "GET",
